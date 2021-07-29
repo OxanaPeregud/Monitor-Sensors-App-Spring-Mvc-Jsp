@@ -9,7 +9,7 @@ import static com.peregud.monitorsensors.AppConstants.VIEW_LOGIN;
 @Controller
 public class AppController {
 
-    @RequestMapping(value = {PAGE_START})
+    @RequestMapping(PAGE_START)
     public String staticResource() {
         return VIEW_LOGIN;
     }

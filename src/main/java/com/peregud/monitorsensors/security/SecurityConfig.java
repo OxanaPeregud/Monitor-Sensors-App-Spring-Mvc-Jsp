@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(PAGE_START, PAGE_SIGN_UP, PAGE_LOGIN, PAGE_USER_SIGN_UP, PAGE_LOGIN_FAILED,
                         PAGE_ACCESS_DENIED).permitAll()
                 .antMatchers(PAGE_USERS_ACCESS).authenticated()
-                .antMatchers(PAGE_ADMIN_ACCESS).hasAnyAuthority(ATTR_ADMIN)
+                .antMatchers(PAGE_ADMIN_ACCESS).hasAuthority(ATTR_ADMIN)
                 .and().exceptionHandling().accessDeniedHandler(accessDeniedHandler())
                 .and().formLogin().loginPage(PAGE_LOGIN)
                 .successHandler(customAuthSuccessHandler)

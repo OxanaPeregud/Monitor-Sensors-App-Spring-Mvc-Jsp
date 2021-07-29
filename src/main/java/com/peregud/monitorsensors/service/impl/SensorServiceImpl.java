@@ -72,10 +72,7 @@ public class SensorServiceImpl implements SensorService {
     @Override
     public List<SensorDto> findSensor(String search) {
         return convertService.covertList(
-                sensorRepository.findAll(nameSearch(search)
-                        .or(modelSearch(search)
-                                .or(typeSearch(search)
-                                        .or(descriptionSearch(search))))),
+                sensorRepository.findAll(shopSearch(search)),
                 Sensor.class,
                 SensorDto.class);
     }

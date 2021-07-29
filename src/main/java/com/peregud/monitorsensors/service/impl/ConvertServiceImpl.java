@@ -15,11 +15,6 @@ public class ConvertServiceImpl implements ConvertService {
     private ConversionService conversionService;
 
     @Override
-    public <T, E> E convertEntity(T source, Class<E> targetClass) {
-        return conversionService.convert(source, targetClass);
-    }
-
-    @Override
     @SuppressWarnings("unchecked")
     public <T, E> List<E> covertList(List<T> source, Class<T> sourceClass, Class<E> targetClass) {
         TypeDescriptor sourceType = TypeDescriptor.collection(List.class, TypeDescriptor.valueOf(sourceClass));
