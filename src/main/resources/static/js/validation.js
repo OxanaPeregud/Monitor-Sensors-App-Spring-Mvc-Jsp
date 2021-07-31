@@ -38,7 +38,7 @@ function validateForm() {
         }
     }
 
-    if (rangeFrom === "" || rangeTo === "") {
+    if ((rangeFrom === "") && (rangeTo === "")) {
         rangeErr = false;
     } else {
         if (rangeFrom >= rangeTo) {
