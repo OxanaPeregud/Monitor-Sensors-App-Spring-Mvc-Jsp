@@ -11,14 +11,23 @@
 
 <body>
 
-<button type="button" class="button"><a class="homepage" href="${pageContext.request.contextPath}/logout">Sign Out</a>
+<button type="button" class="button2"><a class="homepage" href="${pageContext.request.contextPath}/logout">Sign Out</a>
 </button>
+
+<body style="text-align:center;">
+
+<button type="button" class="button3"><a class="homepage"
+                                         href="${pageContext.request.contextPath}/admin/sensor-add">Add Sensor</a>
+</button>
+
 
 <div>
     <h1>Sensor Table</h1>
 </div>
 
-<body style="text-align:center;">
+<br>
+<br>
+<br>
 
 <div>
 
@@ -76,8 +85,8 @@
         </table>
     </form>
 
-    <button type="button" class="button"><a class="homepage"
-                                            href="${pageContext.request.contextPath}/admin/sensor-add">Add Sensor</a>
+    <button type="button" class="button2">
+        <a class="homepage" href="${pageContext.request.contextPath}/user/sensors-list">Go to full Sensor list</a>
     </button>
 
 </div>

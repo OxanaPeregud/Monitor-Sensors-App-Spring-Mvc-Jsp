@@ -88,6 +88,6 @@ public class SensorServiceImpl implements SensorService {
     }
 
     private PageRequest gotoPage(int page) {
-        return PageRequest.of(page, PAGE_SIZE, Sort.Direction.DESC, PARAM_ID);
+        return PageRequest.of(page, PAGE_SIZE, Sort.Direction.ASC, PARAM_ID);
     }
 }

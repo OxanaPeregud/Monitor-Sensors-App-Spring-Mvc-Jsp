@@ -11,14 +11,23 @@
 
 <body>
 
-<button type="button" class="button"><a class="homepage" href="${pageContext.request.contextPath}/logout">Sign Out</a>
+<button type="button" class="button2"><a class="homepage" href="${pageContext.request.contextPath}/logout">Sign Out</a>
 </button>
+
+<body style="text-align:center;">
+
+<button type="button" class="button3"><a class="homepage"
+                                        href="${pageContext.request.contextPath}/admin/sensor-add">Add Sensor</a>
+</button>
+
 
 <div>
     <h1>Sensor Table</h1>
 </div>
 
-<body style="text-align:center;">
+<br>
+<br>
+<br>
 
 <div>
 
@@ -76,13 +85,21 @@
         </table>
     </form>
 
-    <c:forEach var="i" begin="0" end="${lastPageNo-1}">
-        <a href="${pageContext.request.contextPath}/user/sensors-list?pageNo=${i}">${i+1}</a>
-    </c:forEach>
+    <c:if test="${lastPageNo >= 1}">
+        <c:forEach var="i" begin="0" end="${lastPageNo-1}">
+            <button type="button" class="button1">
+                <a class="pages" href="${pageContext.request.contextPath}/user/sensors-list?pageNo=${i}">${i+1}</a>
+            </button>
+        </c:forEach>
+    </c:if>
 
-    <button type="button" class="button"><a class="homepage"
-                                            href="${pageContext.request.contextPath}/admin/sensor-add">Add Sensor</a>
-    </button>
+    <c:if test="${lastPageNo < 1}">
+        <c:forEach var="i" begin="0" end="${lastPageNo}">
+            <button type="button" class="button1">
+                <a class="pages" href="${pageContext.request.contextPath}/user/sensors-list?pageNo=${i}">${i+1}</a>
+            </button>
+        </c:forEach>
+    </c:if>
 
 </div>
 </body>

@@ -73,7 +73,36 @@ footer {
     font-size: larger;
 }
 
-.button {
+.homepage {
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pages {
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button1 {
+    display: inline-block;
+    border-radius: 1px;
+    background-color: #191970;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    float: left;
+    margin-left: 5px;
+}
+
+.button2 {
     display: inline-block;
     border-radius: 4px;
     background-color: #B0C4DE;
@@ -85,12 +114,19 @@ footer {
     cursor: pointer;
     margin: 5px;
     width: 15%;
+    float: left;
 }
 
-.homepage {
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
+.button3 {
     display: inline-block;
+    border-radius: 4px;
+    background-color: #B0C4DE;
+    border: 1;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 15%;
+    float: right;
 }
